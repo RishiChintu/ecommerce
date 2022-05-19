@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Tv List - Spring Boot Web Application Example</title>
+</head>
+<body>
+    <h1 align="center">My Tv List</h1>
+    <br/>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>brand</th>
+                <th>displayType</th>
+                <th>displaySize</th>
+                <th>price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="contact : ${contacts}">
+                <td th:text="${tv.id}">id</td>
+                <td th:text="${tv.brand}">brand</td>
+                <td th:text="${tv.displayType}">displayType</td>
+                <td th:text="${tv.displaySize}">displaySize</td>
+                <td th:text="${tv.price}">price</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
